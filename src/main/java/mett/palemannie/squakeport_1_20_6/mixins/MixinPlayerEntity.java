@@ -1,5 +1,7 @@
-package mett.palemannie.squakeport_1_20_3.mixins;
+package mett.palemannie.squakeport_1_20_6.mixins;
 
+import mett.palemannie.squakeport_1_20_6.ISquakeEntity;
+import mett.palemannie.squakeport_1_20_6.SquakeClientPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,8 +14,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import mett.palemannie.squakeport_1_20_3.ISquakeEntity;
-import mett.palemannie.squakeport_1_20_3.SquakeClientPlayer;
 
 @Mixin(Player.class)
 public abstract class MixinPlayerEntity

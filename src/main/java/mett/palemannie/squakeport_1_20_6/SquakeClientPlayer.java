@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_20_3;
+package mett.palemannie.squakeport_1_20_6;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -9,12 +9,14 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.chunk.ChunkStatus;
+import net.minecraft.world.level.chunk.status.ChunkStatus;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -267,7 +269,7 @@ public class SquakeClientPlayer {
     {
         // taken from sprint
         int j = Mth.floor(player.getX());
-        int i = Mth.floor(player.getY() - 0.20000000298023224D - player.getMyRidingOffset(player));
+        int i = Mth.floor(player.getY() - 0.20000000298023224D);
         int k = Mth.floor(player.getZ());
         BlockState blockState = player.level().getBlockState(new BlockPos(j, i, k));
 
@@ -316,7 +318,7 @@ public class SquakeClientPlayer {
         } else
         {
             // gravity
-            var gravity = player.getAttribute(net.minecraftforge.common.ForgeMod.ENTITY_GRAVITY.get());
+            var gravity = player.getAttribute(Attributes.GRAVITY);
             if(gravity != null) motionY -= gravity.getValue();
         }
 

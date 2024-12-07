@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_20_3;
+package mett.palemannie.squakeport_1_20_6;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
