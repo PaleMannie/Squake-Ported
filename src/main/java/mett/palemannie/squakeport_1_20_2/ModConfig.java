@@ -1,90 +1,73 @@
-package mett.palemannie.squakeport_1_20;
+package mett.palemannie.squakeport_1_20_2;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 import org.apache.commons.lang3.tuple.Pair;
 
-public class ModConfig
-{
-    public static boolean isEnabled()
-    {
+public class ModConfig {
+    public static boolean isEnabled() {
         return COMMON.ENABLED.get();
     }
 
-    public static void setEnabled(boolean enabled)
-    {
+    public static void setEnabled(boolean enabled) {
         COMMON.ENABLED.set(enabled);
         COMMON.ENABLED.save();
     }
 
-    public static boolean sharkingEnabled()
-    {
+    public static boolean sharkingEnabled() {
         return COMMON.SHARKING_ENABLED.get();
     }
 
-    public static boolean trimpingEnabled()
-    {
+    public static boolean trimpingEnabled() {
         return COMMON.TRIMPING_ENABLED.get();
     }
 
-    public static boolean uncappedBunnyhopEnabled()
-    {
+    public static boolean uncappedBunnyhopEnabled() {
         return COMMON.UNCAPPED_BUNNYHOP_ENABLED.get();
     }
 
-    public static double accelerate()
-    {
+    public static double accelerate() {
         return COMMON.ACCELERATE.get();
     }
 
-    public static double airAccelerate()
-    {
+    public static double airAccelerate() {
         return COMMON.AIR_ACCELERATE.get();
     }
 
-    public static double sharkingSurfTension()
-    {
+    public static double sharkingSurfTension() {
         return 1.0D - COMMON.SHARKING_SURFACE_TENSION.get();
     }
 
-    public static double trimpMult()
-    {
+    public static double trimpMult() {
         return COMMON.TRIMP_MULTIPLIER.get();
     }
 
-    public static double sharkingWaterFriction()
-    {
+    public static double sharkingWaterFriction() {
         return 1.0D - COMMON.SHARKING_WATER_FRICTION.get() * 0.05D;
     }
 
-    public static double maxAirAccelPerTick()
-    {
+    public static double maxAirAccelPerTick() {
         return COMMON.MAX_AIR_ACCEL_PER_TICK.get();
     }
 
-    public static float softCap()
-    {
+    public static float softCap() {
         return COMMON.SOFT_CAP.get().floatValue() * 0.125F;
     }
 
-    public static float hardCap()
-    {
+    public static float hardCap() {
         return COMMON.HARD_CAP.get().floatValue() * 0.125F;
     }
 
-    public static float softCapDegen()
-    {
+    public static float softCapDegen() {
         return COMMON.SOFT_CAP_DEGEN.get().floatValue();
     }
 
-    public static float increasedFallDistance()
-    {
+    public static float increasedFallDistance() {
         return COMMON.INCREASED_FALL_DISTANCE.get().floatValue();
     }
 
-    public static class Common
-    {
+    public static class Common {
         public final ForgeConfigSpec.BooleanValue ENABLED;
 
         public final ForgeConfigSpec.BooleanValue UNCAPPED_BUNNYHOP_ENABLED;
@@ -102,8 +85,7 @@ public class ModConfig
         public final ForgeConfigSpec.DoubleValue TRIMP_MULTIPLIER;
         public final ForgeConfigSpec.DoubleValue INCREASED_FALL_DISTANCE;
 
-        Common(ForgeConfigSpec.Builder builder)
-        {
+        Common(ForgeConfigSpec.Builder builder) {
             builder.comment("Movement configurations")
                     .push("movement");
 
@@ -174,16 +156,14 @@ public class ModConfig
     static final ForgeConfigSpec commonSpec;
     public static final Common COMMON;
 
-    static
-    {
+    static {
         final Pair<Common, ForgeConfigSpec> specPair = new ForgeConfigSpec.Builder().configure(Common::new);
         commonSpec = specPair.getRight();
         COMMON = specPair.getLeft();
     }
 
     @SubscribeEvent
-    public static void onLoad(final ModConfigEvent.Loading configEvent)
-    {
-        Squakeport_1_20.LOGGER.debug("Loaded squake config file {}", configEvent.getConfig().getFileName());
+    public static void onLoad(final ModConfigEvent.Loading configEvent) {
+        Squakeport_1_20_2.LOGGER.debug("Loaded squake config file {}", configEvent.getConfig().getFileName());
     }
 }

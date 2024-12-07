@@ -1,13 +1,11 @@
-package mett.palemannie.squakeport_1_20;
+package mett.palemannie.squakeport_1_20_2;
 
-public interface ISquakeEntity
-{
+public interface ISquakeEntity {
     int getDisabledMovementTicks_Squake();
 
     void setDisabledMovementTicks_Squake(int amt);
 
-    default boolean shouldReturnMovement_Squake()
-    {
+    default boolean shouldReturnMovement_Squake() {
         return getDisabledMovementTicks_Squake() > 0;
     }
 }

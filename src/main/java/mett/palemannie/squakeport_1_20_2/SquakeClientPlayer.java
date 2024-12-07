@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_20;
+package mett.palemannie.squakeport_1_20_2;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -14,13 +14,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkStatus;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.fml.ModList;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SquakeClientPlayer
-{
+public class SquakeClientPlayer {
     private static final List<float[]> baseVelocities = new ArrayList<>();
     private static Method setDidJumpThisTick = null;
     private static Method setIsJumping = null;
@@ -268,7 +266,7 @@ public class SquakeClientPlayer
     {
         // taken from sprint
         int j = Mth.floor(player.getX());
-        int i = Mth.floor(player.getY() - 0.20000000298023224D - player.getMyRidingOffset());
+        int i = Mth.floor(player.getY() - 0.20000000298023224D - player.getMyRidingOffset(player));
         int k = Mth.floor(player.getZ());
         BlockState blockState = player.level().getBlockState(new BlockPos(j, i, k));
 
@@ -318,7 +316,7 @@ public class SquakeClientPlayer
         {
             // gravity
             var gravity = player.getAttribute(net.minecraftforge.common.ForgeMod.ENTITY_GRAVITY.get());
-            motionY -= gravity.getValue();
+            if(gravity != null) motionY -= gravity.getValue();
         }
 
         // air resistance
@@ -338,12 +336,12 @@ public class SquakeClientPlayer
     private static void minecraft_SwingLimbsBasedOnMovement(Player player)
     {
         player.walkAnimation.speedOld = player.walkAnimation.speed;
-		double d0 = player.getX() - player.xo;
-		double d1 = player.getZ() - player.zo;
-		float f6 = Mth.sqrt((float) (d0 * d0 + d1 * d1)) * 4.0F;
-		if(f6 > 1.0F) f6 = 1.0F;
-		player.walkAnimation.speed += (f6 - player.walkAnimation.speed) * 0.4F;
-		player.walkAnimation.position += player.walkAnimation.speed;
+        double d0 = player.getX() - player.xo;
+        double d1 = player.getZ() - player.zo;
+        float f6 = Mth.sqrt((float) (d0 * d0 + d1 * d1)) * 4.0F;
+        if(f6 > 1.0F) f6 = 1.0F;
+        player.walkAnimation.speed += (f6 - player.walkAnimation.speed) * 0.4F;
+        player.walkAnimation.position += player.walkAnimation.speed;
     }
 
     private static void minecraft_WaterMove(Player player, float sidemove, float upmove, float forwardmove)
@@ -405,11 +403,11 @@ public class SquakeClientPlayer
             // get all relevant movement values
             float wishspeed = (sidemove != 0.0F || forwardmove != 0.0F) ? quake_getMoveSpeed(player) : 0.0F;
             float[] wishdir = getMovementDirection(player, sidemove, forwardmove);
-            boolean onGroundForReal = player.onGround() && !isJumping(player);
+            boolean isOnGroundForReal = player.onGround() && !isJumping(player);
             float momentumRetention = getSlipperiness(player);
 
             // ground movement
-            if(onGroundForReal)
+            if(isOnGroundForReal)
             {
                 // apply friction before acceleration so we can accelerate back up to maxspeed afterwards
                 //quake_Friction(); // buggy because material-based friction uses a totally different format
