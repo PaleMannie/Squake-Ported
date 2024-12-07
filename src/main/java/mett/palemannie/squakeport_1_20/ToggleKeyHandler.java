@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_19_4;
+package mett.palemannie.squakeport_1_20;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;

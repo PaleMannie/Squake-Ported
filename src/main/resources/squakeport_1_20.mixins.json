@@ -1,8 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8.5",
-  "package": "mett.palemannie.squakeport_1_19_4.mixins",
-  "refmap": "squakeport_1_19_4.mixins-refmap.json",
+  "package": "mett.palemannie.squakeport_1_20.mixins",
+  "refmap": "squakeport_1_20.mixins-refmap.json",
 
   "injectors": {
     "defaultRequire": 1

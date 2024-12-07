@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_19_4;
+package mett.palemannie.squakeport_1_20;
 
 public interface ISquakeEntity
 {

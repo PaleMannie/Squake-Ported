@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_19_4;
+package mett.palemannie.squakeport_1_20;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
@@ -48,7 +48,7 @@ public class Motions
 
     public static float getSlipperiness(Entity entity, BlockPos pos)
     {
-        return entity.level.getBlockState(pos).getFriction(entity.level, pos, entity);
+        return entity.level().getBlockState(pos).getFriction(entity.level(), pos, entity);
     }
 
     public static double getSideMove(Vec3 relative)
@@ -82,6 +82,6 @@ public class Motions
      */
     private static boolean isLiquidPresentInAABB(Player player, AABB bb)
     {
-        return player.level.noCollision(player, bb) && !player.level.containsAnyLiquid(bb);
+        return player.level().noCollision(player, bb) && !player.level().containsAnyLiquid(bb);
     }
 }

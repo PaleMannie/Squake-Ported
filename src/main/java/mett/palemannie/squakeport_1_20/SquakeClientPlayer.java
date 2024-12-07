@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_19_4;
+package mett.palemannie.squakeport_1_20;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -43,7 +43,7 @@ public class SquakeClientPlayer
 
     public static boolean moveEntityWithHeading(Player player, ISquakeEntity squakeEntity, float sidemove, float upmove, float forwardmove)
     {
-        if(!player.level.isClientSide)
+        if(!player.level().isClientSide)
             return false;
 
         if(!ModConfig.isEnabled())
@@ -73,7 +73,7 @@ public class SquakeClientPlayer
 
     public static void beforeOnLivingUpdate(Player player)
     {
-        if(!player.level.isClientSide)
+        if(!player.level().isClientSide)
             return;
 
         if(setDidJumpThisTick != null)
@@ -112,7 +112,7 @@ public class SquakeClientPlayer
 
     public static boolean moveRelative(Player player, ISquakeEntity squakeEntity, float sidemove, float upmove, float forwardmove, float friction)
     {
-        if(!player.level.isClientSide)
+        if(!player.level().isClientSide)
             return false;
 
         if(!ModConfig.isEnabled())
@@ -144,7 +144,7 @@ public class SquakeClientPlayer
 
     public static void afterJump(Player player)
     {
-        if(!player.level.isClientSide)
+        if(!player.level().isClientSide)
             return;
 
         if(!ModConfig.isEnabled())
@@ -194,7 +194,7 @@ public class SquakeClientPlayer
     {
         float f2 = 1.0F;
 
-        if(player.isOnGround())
+        if(player.onGround())
         {
             BlockPos groundPos = new BlockPos(Mth.floor(player.getX()), Mth.floor(player.getBoundingBox().minY) - 1, Mth.floor(player.getZ()));
             f2 = 1.0F - Motions.getSlipperiness(player, groundPos);
@@ -206,7 +206,7 @@ public class SquakeClientPlayer
     private static float getSlipperiness(Player player)
     {
         float f2 = 0.91F;
-        if(player.isOnGround())
+        if(player.onGround())
         {
             BlockPos groundPos = new BlockPos(Mth.floor(player.getX()), Mth.floor(player.getBoundingBox().minY) - 1, Mth.floor(player.getZ()));
             f2 = Motions.getSlipperiness(player, groundPos) * 0.91F;
@@ -270,7 +270,7 @@ public class SquakeClientPlayer
         int j = Mth.floor(player.getX());
         int i = Mth.floor(player.getY() - 0.20000000298023224D - player.getMyRidingOffset());
         int k = Mth.floor(player.getZ());
-        BlockState blockState = player.level.getBlockState(new BlockPos(j, i, k));
+        BlockState blockState = player.level().getBlockState(new BlockPos(j, i, k));
 
         var motion = player.getDeltaMovement();
         RandomSource random = player.getRandom();
@@ -279,7 +279,7 @@ public class SquakeClientPlayer
         {
             for(int iParticle = 0; iParticle < numParticles; iParticle++)
             {
-                player.level.addParticle(new BlockParticleOption(ParticleTypes.BLOCK, blockState), player.getX() + (random.nextFloat() - 0.5D) * player.getBbWidth(), player.getBoundingBox().minY + 0.1D, player.getZ() + (random.nextFloat() - 0.5D) * player.getBbWidth(), -motion.x * 4.0D, 1.5D, -motion.z * 4.0D);
+                player.level().addParticle(new BlockParticleOption(ParticleTypes.BLOCK, blockState), player.getX() + (random.nextFloat() - 0.5D) * player.getBbWidth(), player.getBoundingBox().minY + 0.1D, player.getZ() + (random.nextFloat() - 0.5D) * player.getBbWidth(), -motion.x * 4.0D, 1.5D, -motion.z * 4.0D);
             }
         }
     }
@@ -299,13 +299,13 @@ public class SquakeClientPlayer
      * =================================================
      */
 
-    ///The commented out condition caused the physics to break over and under the build limit while Quake mode was on.
-    /// Fixed now. Keeping it commented for archiving purposes idk.
     private static void minecraft_ApplyGravity(Player player)
     {
         double motionY = Motions.getMotionY(player);
 
-        if(player.level.isClientSide && (/*!player.level.isLoaded(new BlockPos((int) player.getX(), (int) player.getY(), (int) player.getZ())) ||*/ player.level.getChunk(new BlockPos((int) player.getX(), (int) player.getY(), (int) player.getZ())).getStatus() != ChunkStatus.FULL))
+        ///The commented out condition caused the physics to break over and under the build limit while Quake mode was on.
+        /// Fixed now. Keeping it commented for archiving purposes idk.
+        if(player.level().isClientSide && (/*!player.level().isLoaded(new BlockPos((int) player.getX(), (int) player.getY(), (int) player.getZ())) ||*/ player.level().getChunk(new BlockPos((int) player.getX(), (int) player.getY(), (int) player.getZ())).getStatus() != ChunkStatus.FULL))
         {
             if(player.getY() > 0.0D)
             {
@@ -405,11 +405,11 @@ public class SquakeClientPlayer
             // get all relevant movement values
             float wishspeed = (sidemove != 0.0F || forwardmove != 0.0F) ? quake_getMoveSpeed(player) : 0.0F;
             float[] wishdir = getMovementDirection(player, sidemove, forwardmove);
-            boolean isOnGroundForReal = player.isOnGround() && !isJumping(player);
+            boolean onGroundForReal = player.onGround() && !isJumping(player);
             float momentumRetention = getSlipperiness(player);
 
             // ground movement
-            if(isOnGroundForReal)
+            if(onGroundForReal)
             {
                 // apply friction before acceleration so we can accelerate back up to maxspeed afterwards
                 //quake_Friction(); // buggy because material-based friction uses a totally different format
@@ -450,7 +450,7 @@ public class SquakeClientPlayer
                 if(ModConfig.sharkingEnabled() && ModConfig.sharkingSurfTension() > 0.0D && isJumping(player) && Motions.getMotionY(player) < 0.0F)
                 {
                     var aabb = player.getBoundingBox().move(player.getDeltaMovement());
-                    boolean isFallingIntoWater = player.level.containsAnyLiquid(aabb);
+                    boolean isFallingIntoWater = player.level().containsAnyLiquid(aabb);
 
                     if(isFallingIntoWater)
                         Motions.setMotionY(player, Motions.getMotionY(player) * ModConfig.sharkingSurfTension());
