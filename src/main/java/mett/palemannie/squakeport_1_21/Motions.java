@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_20_6;
+package mett.palemannie.squakeport_1_21;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;

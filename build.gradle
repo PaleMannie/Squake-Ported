@@ -10,7 +10,7 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = mod_id
+    archivesName = "squakeport_1_21-1_21_1"
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -29,19 +29,18 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            //arg "-mixin.config=squakeport_1_20_6.mixins.json"
         }
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
-            arg "-mixin.config=squakeport_1_20_6.mixins.json"
+            arg "-mixin.config=squakeport_1_21.mixins.json"
 
         }
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
-            arg "-mixin.config=squakeport_1_20_6.mixins.json"
+            arg "-mixin.config=squakeport_1_21.mixins.json"
 
         }
 
@@ -61,10 +60,10 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 mixin {
     // MixinGradle Settings
-    config 'squakeport_1_20_6.mixins.json'
+    config 'squakeport_1_21.mixins.json'
     sourceSets {
         main {
-            ext.refMap = "squakeport_1_20_6.mixins-refmap.json"
+            ext.refMap = "squakeport_1_21.mixins-refmap.json"
         }
     }
     debug.verbose = true
@@ -108,11 +107,9 @@ tasks.named('jar', Jar).configure {
 
                 "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
                 "TweakOrder": 0,
-                "MixinConfigs": "squakeport_1_20_6.mixins.json"
+                "MixinConfigs": "squakeport_1_21.mixins.json"
         ])
     }
-
-    //finalizedBy 'reobfJar'
 }
 
 publishing {
@@ -129,9 +126,6 @@ publishing {
 }
 
 eclipse {
-    // Run everytime eclipse builds the code
-    //autoBuildTasks genEclipseRuns
-    // Run when importing the project
     synchronizationTasks 'genEclipseRuns'
 }
 
