@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_21;
+package mett.palemannie.squakeport_1_21_3;
 
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -12,15 +12,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(Squakeport_1_21.MODID)
-public class Squakeport_1_21
+@Mod(Squakeport_1_21_3.MODID)
+public class Squakeport_1_21_3
 {
-    public static final String MODID = "squakeport_1_21";
-    public static final String MODNAME = "Squakeport_1_21";
-    public static Squakeport_1_21 instance;
+    public static final String MODID = "squakeport_1_21_3";
+    public static final String MODNAME = "Squakeport_1_21_3";
+    public static Squakeport_1_21_3 instance;
     public static final Logger LOGGER = LogManager.getLogger(MODNAME);
 
-    public Squakeport_1_21()
+    public Squakeport_1_21_3()
     {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, ModConfig.commonSpec);

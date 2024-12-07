@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_21;
+package mett.palemannie.squakeport_1_21_3;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -164,6 +164,6 @@ public class ModConfig {
 
     @SubscribeEvent
     public static void onLoad(final ModConfigEvent.Loading configEvent) {
-        Squakeport_1_21.LOGGER.debug("Loaded squake config file {}", configEvent.getConfig().getFileName());
+        Squakeport_1_21_3.LOGGER.debug("Loaded squake config file {}", configEvent.getConfig().getFileName());
     }
 }

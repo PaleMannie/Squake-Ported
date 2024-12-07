@@ -1,7 +1,8 @@
-package mett.palemannie.squakeport_1_21.mixins;
+package mett.palemannie.squakeport_1_21_3.mixins;
 
-import mett.palemannie.squakeport_1_21.ISquakeEntity;
-import mett.palemannie.squakeport_1_21.SquakeClientPlayer;
+import mett.palemannie.squakeport_1_21_3.ISquakeEntity;
+import mett.palemannie.squakeport_1_21_3.SquakeClientPlayer;
+import net.minecraft.stats.Stats;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,6 +10,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Slice;
@@ -20,6 +22,7 @@ public abstract class MixinPlayerEntity
         extends LivingEntity
         implements ISquakeEntity
 {
+
     public MixinPlayerEntity(EntityType<? extends LivingEntity> p_20966_, Level p_20967_)
     {
         super(p_20966_, p_20967_);
@@ -40,11 +43,16 @@ public abstract class MixinPlayerEntity
         SquakeClientPlayer.beforeOnLivingUpdate(asPlayer);
     }
 
-    @Inject(method = "jumpFromGround", at = @At("TAIL"))
-    public void afterJump(CallbackInfo ci)
-    {
-        var asPlayer = (Player) (LivingEntity) this;
-        SquakeClientPlayer.afterJump(asPlayer);
+/********************************************************************************************
+*   jumpFromGround has been removed by Mojang I believe as I didn't find it anywhere
+*   else than in LivingEntity.
+*   re-adding the method and only put in there what was injected before.
+*********************************************************************************************/
+    @Unique
+    public void jumpFromGround() {
+        super.jumpFromGround();
+            var asPlayer = (Player) (LivingEntity) this;
+            SquakeClientPlayer.afterJump(asPlayer);
     }
 
     private boolean wasVelocityChangedBeforeFall = false;
