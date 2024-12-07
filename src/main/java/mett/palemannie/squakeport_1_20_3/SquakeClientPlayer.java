@@ -1,8 +1,9 @@
-package mett.palemannie.squakeport_1_20_2;
+package mett.palemannie.squakeport_1_20_3;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffects;
@@ -63,9 +64,9 @@ public class SquakeClientPlayer {
         else
             didQuakeMovement = quake_moveEntityWithHeading(player, sidemove, upmove, forwardmove);
 
-        if(didQuakeMovement)
-            player.checkMovementStatistics(player.getX() - d0, player.getY() - d1, player.getZ() - d2);
-
+        if(didQuakeMovement && player instanceof ServerPlayer splayer) {
+            splayer.checkMovementStatistics(player.getX() - d0, player.getY() - d1, player.getZ() - d2);
+        }
         return didQuakeMovement;
     }
 

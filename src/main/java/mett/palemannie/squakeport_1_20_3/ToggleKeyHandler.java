@@ -1,10 +1,10 @@
-package mett.palemannie.squakeport_1_20_2;
+package mett.palemannie.squakeport_1_20_3;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.contents.LiteralContents;
+import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.network.chat.contents.TranslatableContents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -35,9 +35,9 @@ public class ToggleKeyHandler
             ModConfig.setEnabled(!ModConfig.isEnabled());
             var message = MutableComponent.create(new TranslatableContents("squake.key.toggle.message", null, new Object[0]));
             var onOrOff = MutableComponent.create(new TranslatableContents(ModConfig.isEnabled() ? "squake.key.toggle.enabled" : "squake.key.toggle.disabled", null, new Object[0])).withStyle(ModConfig.isEnabled() ? ChatFormatting.GREEN : ChatFormatting.DARK_RED);
-            var t1 = MutableComponent.create(new LiteralContents("["));
-            var t2 = MutableComponent.create(new LiteralContents("Squake")).withStyle(ChatFormatting.GOLD);
-            var t3 = MutableComponent.create(new LiteralContents("] "));
+            var t1 = MutableComponent.create(new PlainTextContents.LiteralContents("["));
+            var t2 = MutableComponent.create(new PlainTextContents.LiteralContents("Squake")).withStyle(ChatFormatting.GOLD);
+            var t3 = MutableComponent.create(new PlainTextContents.LiteralContents("] "));
             Minecraft.getInstance().gui.getChat().addMessage(t1.append(t2).append(t3).append(message).append(onOrOff).append(t3));
         }
     }
