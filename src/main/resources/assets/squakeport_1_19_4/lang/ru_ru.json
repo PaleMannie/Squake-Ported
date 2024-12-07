@@ -1,0 +1,7 @@
+{
+  "key.categories.squake": "Squake",
+  "squake.key.toggle": "Переключить режим движения Quake",
+  "squake.key.toggle.enabled": "ВКЛ",
+  "squake.key.toggle.disabled": "ВЫКЛ",
+  "squake.key.toggle.message" : "Режим движения Quake'а ["
+}

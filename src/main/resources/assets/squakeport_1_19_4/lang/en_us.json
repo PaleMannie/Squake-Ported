@@ -1,0 +1,7 @@
+{
+  "key.categories.squake": "Squake",
+  "squake.key.toggle": "Toggle Quake Movement System",
+  "squake.key.toggle.enabled": "ON",
+  "squake.key.toggle.disabled": "OFF",
+  "squake.key.toggle.message" : "Quake Movement mode ["
+}

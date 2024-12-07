@@ -1,0 +1,9 @@
+{
+  "pack": {
+    "description": {
+      "text": "squakeport_1_19_4 resources"
+    },
+    "forge:server_data_pack_format": 12,
+    "pack_format": 13
+  }
+}
