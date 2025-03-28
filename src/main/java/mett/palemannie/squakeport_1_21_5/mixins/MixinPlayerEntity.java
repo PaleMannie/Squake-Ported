@@ -1,8 +1,7 @@
-package mett.palemannie.squakeport_1_21_3.mixins;
+package mett.palemannie.squakeport_1_21_5.mixins;
 
-import mett.palemannie.squakeport_1_21_3.ISquakeEntity;
-import mett.palemannie.squakeport_1_21_3.SquakeClientPlayer;
-import net.minecraft.stats.Stats;
+import mett.palemannie.squakeport_1_21_5.ISquakeEntity;
+import mett.palemannie.squakeport_1_21_5.SquakeClientPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -55,17 +54,18 @@ public abstract class MixinPlayerEntity
             SquakeClientPlayer.afterJump(asPlayer);
     }
 
+    @Unique
     private boolean wasVelocityChangedBeforeFall = false;
 
     @Inject(method = "causeFallDamage", at = @At("HEAD"))
-    public void beforeFall(float distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
+    public void beforeFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
         if(level().isClientSide) return;
         wasVelocityChangedBeforeFall = hasImpulse;
     }
 
     @Inject(method = "causeFallDamage", at = @At("RETURN"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;awardStat(Lnet/minecraft/resources/ResourceLocation;I)V"), to = @At("TAIL")))
-    public void afterFall(float distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
+    public void afterFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
         if(level().isClientSide) return;
         hasImpulse = wasVelocityChangedBeforeFall;

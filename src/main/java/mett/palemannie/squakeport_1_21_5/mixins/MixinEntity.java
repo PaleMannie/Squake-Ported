@@ -1,7 +1,7 @@
-package mett.palemannie.squakeport_1_21_3.mixins;
+package mett.palemannie.squakeport_1_21_5.mixins;
 
-import mett.palemannie.squakeport_1_21_3.ISquakeEntity;
-import mett.palemannie.squakeport_1_21_3.SquakeClientPlayer;
+import mett.palemannie.squakeport_1_21_5.ISquakeEntity;
+import mett.palemannie.squakeport_1_21_5.SquakeClientPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Implements;
