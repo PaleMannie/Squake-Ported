@@ -2,7 +2,7 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0.36,6.2)'
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
@@ -10,7 +10,7 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = "squakeport_1_21_5"
+    archivesName = "squakeport_1_21_6"
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -29,18 +29,19 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+            property 'eventbus.api.strictRuntimeChecks', 'true'
         }
 
         client {
             property 'forge.enabledGameTestNamespaces', mod_id
-            arg "-mixin.config=squakeport_1_21_5.mixins.json"
+            arg "-mixin.config=squakeport_1_21_6.mixins.json"
 
         }
 
         server {
             property 'forge.enabledGameTestNamespaces', mod_id
             args '--nogui'
-            arg "-mixin.config=squakeport_1_21_5.mixins.json"
+            arg "-mixin.config=squakeport_1_21_6.mixins.json"
 
         }
 
@@ -60,10 +61,10 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 mixin {
     // MixinGradle Settings
-    config 'squakeport_1_21_5.mixins.json'
+    config 'squakeport_1_21_6.mixins.json'
     sourceSets {
         main {
-            ext.refMap = "squakeport_1_21_5.mixins-refmap.json"
+            ext.refMap = "squakeport_1_21_6.mixins-refmap.json"
         }
     }
     debug.verbose = true
@@ -77,6 +78,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0-beta.7'
 }
 
 tasks.named('processResources', ProcessResources).configure {
@@ -107,7 +109,7 @@ tasks.named('jar', Jar).configure {
 
                 "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
                 "TweakOrder": 0,
-                "MixinConfigs": "squakeport_1_21_5.mixins.json"
+                "MixinConfigs": "squakeport_1_21_6.mixins.json"
         ])
     }
 }

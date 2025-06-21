@@ -1,7 +1,7 @@
-package mett.palemannie.squakeport_1_21_5.mixins;
+package mett.palemannie.squakeport_1_21_6.mixins;
 
-import mett.palemannie.squakeport_1_21_5.ISquakeEntity;
-import mett.palemannie.squakeport_1_21_5.SquakeClientPlayer;
+import mett.palemannie.squakeport_1_21_6.ISquakeEntity;
+import mett.palemannie.squakeport_1_21_6.SquakeClientPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -42,11 +42,10 @@ public abstract class MixinPlayerEntity
         SquakeClientPlayer.beforeOnLivingUpdate(asPlayer);
     }
 
-/********************************************************************************************
-*   jumpFromGround has been removed by Mojang I believe as I didn't find it anywhere
-*   else than in LivingEntity.
+/*************************************************************************************************************
+*   jumpFromGround has been removed by Mojang I believe as I didn't find it anywhere else than in LivingEntity.
 *   re-adding the method and only put in there what was injected before.
-*********************************************************************************************/
+**************************************************************************************************************/
     @Unique
     public void jumpFromGround() {
         super.jumpFromGround();

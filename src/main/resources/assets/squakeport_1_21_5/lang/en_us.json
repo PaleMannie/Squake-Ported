@@ -1,5 +1,5 @@
 {
-  "key.categories.squake": "Squake",
+  "key.category.squake": "Squake",
   "squake.key.toggle": "Toggle Quake Movement System",
   "squake.key.toggle.enabled": "ON",
   "squake.key.toggle.disabled": "OFF",
