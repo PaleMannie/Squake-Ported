@@ -1,7 +1,7 @@
-package mett.palemannie.squakeport_1_21_6.mixins;
+package mett.palemannie.squakeported.mixins;
 
-import mett.palemannie.squakeport_1_21_6.ISquakeEntity;
-import mett.palemannie.squakeport_1_21_6.SquakeClientPlayer;
+import mett.palemannie.squakeported.ISquakeEntity;
+import mett.palemannie.squakeported.SquakeClientPlayer;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
