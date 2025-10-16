@@ -59,14 +59,14 @@ public abstract class MixinPlayerEntity
     @Inject(method = "causeFallDamage", at = @At("HEAD"))
     public void beforeFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
-        if(level().isClientSide) return;
+        if(level().isClientSide()) return;
         wasVelocityChangedBeforeFall = hasImpulse;
     }
 
     @Inject(method = "causeFallDamage", at = @At("RETURN"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;awardStat(Lnet/minecraft/resources/ResourceLocation;I)V"), to = @At("TAIL")))
     public void afterFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
-        if(level().isClientSide) return;
+        if(level().isClientSide()) return;
         hasImpulse = wasVelocityChangedBeforeFall;
     }
 }

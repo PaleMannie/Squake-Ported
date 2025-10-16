@@ -31,7 +31,7 @@ public class ClientEvents {
             }
         }
 
-        @Mod.EventBusSubscriber(modid = SquakePorted.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+        @Mod.EventBusSubscriber(modid = SquakePorted.MODID, value = Dist.CLIENT)
         public static class ClientModBusEvents {
             @SubscribeEvent
             public static void onKeyRegister(RegisterKeyMappingsEvent event){
