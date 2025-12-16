@@ -54,19 +54,19 @@ public abstract class MixinPlayerEntity
     }
 
     @Unique
-    private boolean wasVelocityChangedBeforeFall = false;
+    private boolean sqe$wasVelocityChangedBeforeFall = false;
 
     @Inject(method = "causeFallDamage", at = @At("HEAD"))
     public void beforeFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
         if(level().isClientSide()) return;
-        wasVelocityChangedBeforeFall = hasImpulse;
+        sqe$wasVelocityChangedBeforeFall = needsSync;
     }
 
-    @Inject(method = "causeFallDamage", at = @At("RETURN"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;awardStat(Lnet/minecraft/resources/ResourceLocation;I)V"), to = @At("TAIL")))
+    @Inject(method = "causeFallDamage", at = @At("RETURN"), slice = @Slice(from = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;awardStat(Lnet/minecraft/resources/Identifier;I)V"), to = @At("TAIL")))
     public void afterFall(double distance, float damageMultiplier, DamageSource damageSource, CallbackInfoReturnable<Boolean> cir)
     {
         if(level().isClientSide()) return;
-        hasImpulse = wasVelocityChangedBeforeFall;
+        needsSync = sqe$wasVelocityChangedBeforeFall;
     }
 }

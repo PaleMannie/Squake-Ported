@@ -344,7 +344,9 @@ public class SquakeClientPlayer {
         float f6 = Mth.sqrt((float) (d0 * d0 + d1 * d1)) * 4.0F;
         if(f6 > 1.0F) f6 = 1.0F;
         player.walkAnimation.speed += (f6 - player.walkAnimation.speed) * 0.4F;
-        player.walkAnimation.position += player.walkAnimation.speed;
+
+        ///wtf how did this slide back in. OUT!!!!
+        //player.walkAnimation.position += player.walkAnimation.speed;
     }
 
     private static void minecraft_WaterMove(Player player, float sidemove, float upmove, float forwardmove)
