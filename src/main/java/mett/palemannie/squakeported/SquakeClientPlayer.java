@@ -30,7 +30,7 @@ public class SquakeClientPlayer {
     {
         try
         {
-            if(ModList.get().isLoaded("squeedometer"))
+            if(ModList.isLoaded("squeedometer"))
             {
                 Class<?> hudSpeedometer = Class.forName("squeek.speedometer.HudSpeedometer");
                 setDidJumpThisTick = hudSpeedometer.getDeclaredMethod("setDidJumpThisTick", boolean.class);
@@ -287,7 +287,7 @@ public class SquakeClientPlayer {
 
     private static boolean isJumping(Player player)
     {
-        return player.jumping;
+        return player.isJumping();
     }
 
     /* =================================================

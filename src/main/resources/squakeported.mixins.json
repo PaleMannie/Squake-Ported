@@ -3,7 +3,6 @@
   "minVersion": "0.8.5",
   "package": "mett.palemannie.squakeported.mixins",
   "refmap": "squakeported.mixins-refmap.json",
-
   "injectors": {
     "defaultRequire": 1
   },

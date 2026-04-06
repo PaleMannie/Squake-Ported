@@ -1,88 +1,72 @@
 plugins {
-    id 'eclipse'
+    id 'java'
     id 'idea'
+    id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '[6.0.46,6.2)'
-    id 'org.spongepowered.mixin' version '0.7.+'
+    id 'net.minecraftforge.gradle' version '[7.0.18,8)'
+    id 'net.minecraftforge.jarjar' version '0.2.3'
 }
 
 version = mod_version
 group = mod_group_id
+base.archivesName = mod_id
 
-base {
-    archivesName = "squakeported"
-}
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+println "Java: ${providers.systemProperty('java.version').get()}, " +
+        "JVM: ${providers.systemProperty('java.vm.version').get()} (${providers.systemProperty('java.vendor').get()}), " +
+        "Arch: ${providers.systemProperty('os.arch').get()}"
 
-println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
 
     mappings channel: mapping_channel, version: mapping_version
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-    reobf = false
-    copyIdeResources = true
+    accessTransformer = true
 
     runs {
+
         configureEach {
 
-            workingDirectory project.file('run')
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-            property 'eventbus.api.strictRuntimeChecks', 'true'
-        }
-
-        client {
-            property 'forge.enabledGameTestNamespaces', mod_id
-            arg "-mixin.config=squakeported.mixins.json"
+            workingDir.convention layout.projectDirectory.dir('run')
+            systemProperty 'forge.logging.console.level', 'debug'
+            systemProperty 'eventbus.api.strictRuntimeChecks', 'true'
+            systemProperty 'forge.enabledGameTestNamespaces', 'squakeported'
+            args "-mixin.config=${mod_id}.mixins.json"
 
         }
 
-        server {
-            property 'forge.enabledGameTestNamespaces', mod_id
-            args '--nogui'
-            arg "-mixin.config=squakeported.mixins.json"
+        register('client') {
 
+            systemProperty 'forge.enabledGameTestNamespaces', mod_id
         }
 
-        gameTestServer {
-            property 'forge.enabledGameTestNamespaces', mod_id
+        register('server') {
+
+            systemProperty 'forge.enabledGameTestNamespaces', mod_id
         }
 
-        data {
-            workingDirectory project.file('run-data')
-            args '--mod', mod_id, '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+        register('gameTestServer') {
 
+            systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        }
+
+        register('data') {
+
+            workingDir = layout.projectDirectory.dir('run-data')
+            args '--mod', mod_id, '--all', '--output', layout.projectDirectory.dir('src/generated/resources'), '--existing', layout.projectDirectory.dir('src/main/resources')
         }
     }
 }
 
-sourceSets.main.resources { srcDir 'src/generated/resources' }
+sourceSets.main.resources { srcDir layout.projectDirectory.dir('src/generated/resources') }
 
-mixin {
-    // MixinGradle Settings
-    config 'squakeported.mixins.json'
-    sourceSets {
-        main {
-            ext.refMap = "squakeported.mixins-refmap.json"
-        }
-    }
-    debug.verbose = true
-    debug.export = true
+jarJar.register() {
+    archiveClassifier = null
 }
 
 repositories {
-
-    mavenCentral()
-    maven {
-        name = 'Forge'
-        url = 'https://maven.minecraftforge.net'
-    }
-    maven {
-        name = 'Minecraft libraries'
-        url = 'https://libraries.minecraft.net'
-    }
-
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
     exclusiveContent {
         forRepository {
             maven {
@@ -94,16 +78,21 @@ repositories {
             includeGroupAndSubgroups('org.spongepowered')
         }
     }
+    mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
-    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
-    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0-beta.12'
+
+    implementation minecraft.dependency("net.minecraftforge:forge:$minecraft_version-$forge_version")
+    annotationProcessor 'net.minecraftforge:eventbus-validator:7.0.1'
 }
 
-tasks.named('processResources', ProcessResources).configure {
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('processResources', ProcessResources) {
     var replaceProperties = [
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
             forge_version: forge_version, forge_version_range: forge_version_range,
@@ -111,51 +100,40 @@ tasks.named('processResources', ProcessResources).configure {
             mod_id: mod_id, mod_name: mod_name, mod_license: mod_license, mod_version: mod_version,
             mod_authors: mod_authors, mod_description: mod_description,
     ]
-    inputs.properties replaceProperties
+    inputs.property('replaceProperties', replaceProperties)
 
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
-        expand replaceProperties + [project: project]
+        expand replaceProperties
     }
 }
 
-tasks.named('jar', Jar).configure {
+tasks.named('jar', Jar) {
     manifest {
         attributes([
                 'Specification-Title'     : mod_id,
                 'Specification-Vendor'    : mod_authors,
-                'Specification-Version'   : '1', // We are version 1 of ourselves
+                'Specification-Version'   : '1',
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
-                'Implementation-Vendor'   : mod_authors,
-                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-
-                "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
-                "TweakOrder": 0,
-                "MixinConfigs": "squakeported.mixins.json"
+                'Implementation-Vendor'   : mod_authors
         ])
+
+        attributes['MixinConfigs'] = "${mod_id}.mixins.json"
     }
 }
 
 publishing {
-    publications {
-        register('mavenJava', MavenPublication) {
-            artifact jar
-        }
-    }
     repositories {
-        maven {
-            url "file://${project.projectDir}/mcmodsrepo"
-        }
+        maven { url = project.layout.projectDirectory.dir('mcmodsrepo').asFile.toURL() }
+    }
+
+    publications.register('mavenJava', MavenPublication) {
+        artifact tasks.named("jar")
+        artifact tasks.named("jarJar")
     }
 }
 
-eclipse {
-    synchronizationTasks 'genEclipseRuns'
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-}
+idea.module { downloadJavadoc = downloadSources = true }
 
 sourceSets.each {
     def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
