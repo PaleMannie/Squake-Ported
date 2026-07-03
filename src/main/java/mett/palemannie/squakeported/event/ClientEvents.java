@@ -27,7 +27,7 @@ public class ClientEvents {
                 var t1 = MutableComponent.create(new PlainTextContents.LiteralContents("["));
                 var t2 = MutableComponent.create(new PlainTextContents.LiteralContents("Squake")).withStyle(ChatFormatting.GOLD);
                 var t3 = MutableComponent.create(new PlainTextContents.LiteralContents("] "));
-                Minecraft.getInstance().gui.getChat().addClientSystemMessage(t1.append(t2).append(t3).append(message).append(onOrOff).append(t3));
+                Minecraft.getInstance().gui.hud.getChat().addClientSystemMessage(t1.append(t2).append(t3).append(message).append(onOrOff).append(t3));
             }
         }
 
