@@ -7,8 +7,8 @@ plugins {
 }
 
 version = '1_03_'
-group = 'mett.palemannie.squakeport_1_19_4' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'squakeport_1_19_4'
+group = 'mett.palemannie.squakeported' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'squakeported'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -22,11 +22,11 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'squakeport_1_19_4'
-            arg "-mixin.config=squakeport_1_19_4.mixins.json"
+            property 'forge.enabledGameTestNamespaces', 'squakeported'
+            arg "-mixin.config=squakeported.mixins.json"
 
             mods {
-                squakeport_1_19_4 {
+                squakeported {
                     source sourceSets.main
                 }
             }
@@ -37,11 +37,11 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'squakeport_1_19_4'
-            arg "-mixin.config=squakeport_1_19_4.mixins.json"
+            property 'forge.enabledGameTestNamespaces', 'squakeported'
+            arg "-mixin.config=squakeported.mixins.json"
 
             mods {
-                squakeport_1_19_4 {
+                squakeported {
                     source sourceSets.main
                 }
             }
@@ -51,10 +51,10 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            property 'forge.enabledGameTestNamespaces', 'squakeport_1_19_4'
+            property 'forge.enabledGameTestNamespaces', 'squakeported'
 
             mods {
-                squakeport_1_19_4 {
+                squakeported {
                     source sourceSets.main
                 }
             }
@@ -65,10 +65,10 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'squakeport_1_19_4', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'squakeported', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                squakeport_1_19_4 {
+                squakeported {
                     source sourceSets.main
                 }
             }
@@ -78,10 +78,10 @@ minecraft {
 
 mixin {
     // MixinGradle Settings
-    config 'squakeport_1_19_4.mixins.json'
+    config 'squakeported.mixins.json'
     sourceSets {
         main {
-            ext.refMap = "squakeport_1_19_4.mixins-refmap.json"
+            ext.refMap = "squakeported.mixins-refmap.json"
         }
     }
     debug.verbose = true
@@ -101,20 +101,20 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "squakeport_1_19_4",
-                "Specification-Vendor"    : "squakeport_1_19_4areus",
+                "Specification-Title"     : "squakeported",
+                "Specification-Vendor"    : "squakeportedareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "squakeport_1_19_4areus",
+                "Implementation-Vendor"   : "squakeportedareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
 
                 "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
                 "TweakOrder": 0,
-                "MixinConfigs": "squakeport_1_19_4.mixins.json"
+                "MixinConfigs": "squakeported.mixins.json"
         ])
     }
-    rename 'mixin.refmap.json', 'squakeport_1_19_4.mixins-refmap.json'
+    rename 'mixin.refmap.json', 'squakeported.mixins-refmap.json'
 }
 
 jar.finalizedBy('reobfJar')
