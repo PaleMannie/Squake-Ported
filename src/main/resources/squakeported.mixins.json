@@ -12,6 +12,7 @@
     "MixinPlayerEntity"
   ],
   "client": [
+    "MixinClientPacketListener"
   ],
   "server": [
   ]
