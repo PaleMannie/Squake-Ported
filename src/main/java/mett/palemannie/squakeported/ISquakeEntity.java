@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_21_3;
+package mett.palemannie.squakeported;
 
 public interface ISquakeEntity {
     int getDisabledMovementTicks_Squake();
