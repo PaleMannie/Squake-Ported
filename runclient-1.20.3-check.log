@@ -1,0 +1,1004 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+MixinGradle did not locate the diffplug APT plugin, skipping eclipse task configuration
+Java: 17.0.8, JVM: 17.0.8+7 (Eclipse Adoptium), Arch: amd64
+
+> Task :downloadMcpConfig
+> Task :extractSrg UP-TO-DATE
+> Task :createMcpToSrg UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :createSrgToMcp UP-TO-DATE
+> Task :downloadMCMeta UP-TO-DATE
+> Task :downloadAssets UP-TO-DATE
+> Task :extractNatives UP-TO-DATE
+> Task :makeSrcDirs
+> Task :prepareRuns
+> Task :prepareRunClient
+> Task :prepareRunClientCompile UP-TO-DATE
+
+> Task :runClient
+2026-09-16 12:37:58,704 main WARN Advanced terminal features are not available in this environment
+[12:37:59] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_client, --version, MOD_DEV, --assetIndex, 12, --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --gameDir, ., -mixin.config=squakeport_1_20_3.mixins.json, --mixin.config, squakeport_1_20_3.mixins.json]
+[12:37:59] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: JVM identified as Eclipse Adoptium OpenJDK 64-Bit Server VM 17.0.8+7
+[12:37:59] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.1.2 starting: java version 17.0.8 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[12:37:59] [main/DEBUG] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Found launch services [forge_userdev_client,forge_dev_data,minecraft,forge_userdev_server_gametest,forge_dev_client,forge_userdev_data,forge_dev_server_gametest,testharness,forge_userdev_server,forge_client,forge_dev_server,forge_server]
+[12:37:59] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[12:37:59] [main/DEBUG] [cp.mo.mo.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[12:37:59] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[12:37:59] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run
+[12:37:59] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\mods
+[12:37:59] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config
+[12:37:59] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\fml.toml
+[12:37:59] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[12:38:00] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[12:38:00] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: fml: /
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Found transformer service: mixin: /
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Detected version data : VersionInfo[forgeVersion=49.0.2, mcVersion=1.20.3, mcpVersion=20231205.124940, forgeGroup=net.minecraftforge]
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.LauncherVersion/CORE]: Found FMLLauncher version 49.0.2
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML 49.0.2 loading
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ModLauncher version: 10.1.2
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found AccessTransformer version: 8.1.1
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found EventBus version: 6.2.0
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found RuntimeDistCleaner version: 49.0.2
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: FML found CoreMod version : 5.1.0
+[12:38:00] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Found ForgeSPI version: 7.1.1
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[12:38:00] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[12:38:00] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in SecureModuleClassLoader[SECURE-BOOTSTRAP]@1541857308
+[12:38:01] [EarlyDisplay/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2 GL version 4.6.0 NVIDIA 560.94, NVIDIA Corporation
+[12:38:01] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ Service=ModLauncher Env=CLIENT
+/***************************************************************************************************************************************************************************************************************/
+/*                                                                               SpongePowered MIXIN (Verbose debugging enabled)                                                                               */
+/***************************************************************************************************************************************************************************************************************/
+/*                                         Code source : jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar!/ */
+/*                                    Internal Version : 0.8.5                                                                                                                                                 */
+/*                                        Java Version : 17.0 (supports compatibility 6-17)                                                                                                                    */
+/*                         Default Compatibility Level : JAVA_16                                                                                                                                               */
+/*                                Detected ASM Version : ASM 9.6 (ASM10_EXPERIMENTAL)                                                                                                                          */
+/*                          Detected ASM Supports Java : Up to Java 22 (class file version 66.0)                                                                                                               */
+/***************************************************************************************************************************************************************************************************************/
+/*                                        Service Name : ModLauncher                                                                                                                                           */
+/*                                 Mixin Service Class : org.spongepowered.asm.service.modlauncher.MixinServiceModLauncher                                                                                     */
+/*                       Global Property Service Class : org.spongepowered.asm.service.modlauncher.Blackboard                                                                                                  */
+/*                                 Logger Adapter Type : Log4j2 (via ModLauncher)                                                                                                                              */
+/***************************************************************************************************************************************************************************************************************/
+/*                                         mixin.debug : <false>                                                                                                                                               */
+/*                                  mixin.debug.export : - <true>                                                                                                                                              */
+/*                           mixin.debug.export.filter : - - <null>                                                                                                                                            */
+/*                        mixin.debug.export.decompile : - - <true>                                                                                                                                            */
+/*                  mixin.debug.export.decompile.async : - - - <true>                                                                                                                                          */
+/* mixin.debug.export.decompile.mergeGenericSignatures : - - - <true>                                                                                                                                          */
+/*                                  mixin.debug.verify : - <false>                                                                                                                                             */
+/*                                 mixin.debug.verbose : - <true>                                                                                                                                              */
+/*                         mixin.debug.countInjections : - <false>                                                                                                                                             */
+/*                                  mixin.debug.strict : - <false>                                                                                                                                             */
+/*                           mixin.debug.strict.unique : - - <false>                                                                                                                                           */
+/*                          mixin.debug.strict.targets : - - <false>                                                                                                                                           */
+/*                                mixin.debug.profiler : - <false>                                                                                                                                             */
+/*                           mixin.dumpTargetOnFailure : <false>                                                                                                                                               */
+/*                                        mixin.checks : <false>                                                                                                                                               */
+/*                             mixin.checks.interfaces : - <false>                                                                                                                                             */
+/*                      mixin.checks.interfaces.strict : - - <false>                                                                                                                                           */
+/*                             mixin.ignoreConstraints : <false>                                                                                                                                               */
+/*                                       mixin.hotSwap : <false>                                                                                                                                               */
+/*                                           mixin.env : <false>                                                                                                                                               */
+/*                                       mixin.env.obf : - <false>                                                                                                                                             */
+/*                             mixin.env.disableRefMap : - <false>                                                                                                                                             */
+/*                               mixin.env.remapRefMap : - <true>                                                                                                                                              */
+/*                       mixin.env.refMapRemappingFile : - <G:\Minecraft Modifikationsfabrik\Squake-Ported\build\createSrgToMcp\output.srg>                                                                    */
+/*                        mixin.env.refMapRemappingEnv : - <searge>                                                                                                                                            */
+/*                      mixin.env.allowPermissiveMatch : - <false>                                                                                                                                             */
+/*                            mixin.env.ignoreRequired : - <false>                                                                                                                                             */
+/*                               mixin.env.compatLevel : - <false>                                                                                                                                             */
+/*                          mixin.env.shiftByViolation : - <warn>                                                                                                                                              */
+/*                      mixin.initialiserInjectionMode : <default>                                                                                                                                             */
+/***************************************************************************************************************************************************************************************************************/
+/*                                       Detected Side : CLIENT                                                                                                                                                */
+/***************************************************************************************************************************************************************************************************************/
+[12:38:01] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[12:38:01] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[12:38:01] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[12:38:01] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[12:38:01] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[12:38:01] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path GAMEDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path MODSDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\mods
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path CONFIGDIR is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLPaths/CORE]: Path FMLCONFIG is G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\fml.toml
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading configuration
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing ModFile
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Preparing launch handler
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLLoader/CORE]: Using forge_userdev_client as launch service
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[12:38:01] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[12:38:01] [main/DEBUG] [cp.mo.mo.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=net.minecraftforge.fml.loading.MCPNamingService@1d035be3}
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[12:38:01] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Initiating mod scan
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(minecraft:null),(classpath:null),(forge_dev_locator:null),(forge_userdev_locator:null)
+[12:38:01] [main/DEBUG] [ne.mi.fm.lo.mo.ModDiscoverer/CORE]: Found Dependency Locators : (JarInJar:null)
+[12:38:02] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.20.3}
+[12:38:02] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate G:\Minecraft Modifikationsfabrik\Squake-Ported\build\sourcesSets\main
+[12:38:02] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {squakeported} mods - versions {2-1.20.3}
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {49.0.2}
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from , it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from main, it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from javafmllanguage-1.20.3-49.0.2.jar, it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from lowcodelanguage-1.20.3-49.0.2.jar, it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from mclanguage-1.20.3-49.0.2.jar, it does not contain dependency information.
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Failed to load resource META-INF\jarjar\metadata.json from fmlcore-1.20.3-49.0.2.jar, it does not contain dependency information.
+[12:38:03] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {minecraft} mods - versions {1.20.3}
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate G:\Minecraft Modifikationsfabrik\Squake-Ported\build\sourcesSets\main
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file main with {squakeported} mods - versions {2-1.20.3}
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file G:\Minecraft Modifikationsfabrik\Squake-Ported\build\sourcesSets\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[49,)]]
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Considering mod file candidate /
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {49.0.2}
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Found coremod method_redirector with Javascript path coremods/method_redirector.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/field_to_method.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/field_to_instanceof.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/add_bouncer_method.js
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.mo.ModFile/LOADING]: Found coremod /coremods/method_redirector.js
+[12:38:03] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found 3 language providers
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider lowcodefml, version 49
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.LanguageLoadingProvider/CORE]: Found language provider javafml, version 49.0.2
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Configured system mods: [minecraft, forge]
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: minecraft
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.ModSorter/]: Found system mod: forge
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 2 mod requirements (2 mandatory, 0 optional)
+[12:38:03] [main/DEBUG] [ne.mi.fm.lo.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[12:38:04] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 34990 method mappings from methods.csv
+[12:38:04] [main/DEBUG] [ne.mi.fm.lo.MCPNamingService/CORE]: Loaded 32991 field mappings from fields.csv
+[12:38:04] [main/DEBUG] [cp.mo.mo.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[12:38:04] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[12:38:04] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[12:38:04] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[12:38:04] [main/DEBUG] [ne.mi.fm.lo.FMLServiceProvider/CORE]: Loading coremod transformers
+[12:38:04] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/field_to_method.js
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/field_to_instanceof.js
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/add_bouncer_method.js
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: Loading CoreMod from /coremods/method_redirector.js
+[12:38:05] [main/DEBUG] [ne.mi.co.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@f9cab00 to Target : CLASS {Lnet/minecraft/world/level/biome/Biome;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6a5e167a to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/Structure;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@60e06f7d to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@66a5755 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@771a7d53 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6d6d480c to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@e95595b to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@5a917723 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/PatrolSpawner;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/animal/horse/SkeletonTrapGoal;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/server/commands/SummonCommand;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/npc/Villager;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/structure/structures/SwampHutPiece;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/levelgen/PhantomSpawner;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/monster/Zombie;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/EntityType;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/ai/village/VillageSiege;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/monster/Strider;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/npc/CatSpawner;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/monster/Spider;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/raid/Raid;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/animal/frog/Tadpole;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/level/NaturalSpawner;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/server/commands/RaidCommand;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@7e4579c7 to Target : CLASS {Lnet/minecraft/world/entity/monster/ZombieVillager;} {} {V}
+[12:38:05] [main/DEBUG] [cp.mo.mo.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[12:38:05] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[12:38:05] [main/DEBUG] [mixin/]: Registering mixin config: squakeport_1_20_3.mixins.json
+[12:38:05] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by squakeport_1_20_3.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[12:38:05] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[12:38:05] [main/DEBUG] [mixin/]: Registering mixin config: squakeport_1_20_3.mixins.json
+[12:38:05] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[12:38:05] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[12:38:05] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[12:38:05] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(squakeported)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(squakeported)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(squakeported)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(squakeported)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(squakeported)
+[12:38:05] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(squakeported)]
+[12:38:05] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[12:38:05] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[12:38:05] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[12:38:05] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[12:38:05] [main/DEBUG] [mixin/]: inject() running with 4 agents
+[12:38:05] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[12:38:05] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[12:38:05] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(squakeported)]
+[12:38:05] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[12:38:05] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_client' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --assetIndex, 12]
+[12:38:06] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[12:38:06] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[12:38:06] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[12:38:06] [main/INFO] [mixin/]: Selecting config squakeport_1_20_3.mixins.json
+[12:38:06] [main/WARN] [mixin/]: Reference map 'squakeport_1_20_3.mixins-refmap.json' for squakeport_1_20_3.mixins.json could not be read. If this is a development environment you can ignore this message
+[12:38:06] [main/INFO] [mixin/]: Preparing squakeport_1_20_3.mixins.json (2)
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[12:38:06] [main/DEBUG] [mixin/]: Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[12:38:06] [main/INFO] [mixin/]: Prepared 2 mixins in 0,363 sec (181,5ms avg) (0ms load, 0ms transform, 0ms plugin)
+[12:38:07] [main/DEBUG] [io.ne.ut.in.lo.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[12:38:07] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[12:38:07] [main/DEBUG] [io.ne.ut.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[12:38:08] [main/WARN] [os.ut.FileUtil/]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.properties]
+[12:38:09] [main/WARN] [os.ut.FileUtil/]: Configuration conflict: there is more than one oshi.architecture.properties file on the classpath: [jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties, jar:file:/C:/Users/User/.gradle/caches/modules-2/files-2.1/com.github.oshi/oshi-core/6.4.5/943ba26de047eb6b28fff47f5ee939a34eb5fc8e/oshi-core-6.4.5.jar!/oshi.architecture.properties]
+[12:38:09] [pool-4-thread-1/INFO] [mixin/]: Mixing MixinEntity from squakeport_1_20_3.mixins.json into net.minecraft.world.entity.Entity
+[12:38:10] [pool-4-thread-1/INFO] [mixin/]: Mixing MixinPlayerEntity from squakeport_1_20_3.mixins.json into net.minecraft.world.entity.player.Player
+[12:38:10] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/EntityType
+[12:38:11] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[12:38:11] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[12:38:12] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[12:38:12] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/biome/Biome
+[12:38:14] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/animal/frog/Tadpole
+[12:38:14] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[12:38:15] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Spider
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Zombie
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/ZombieVillager
+[12:38:16] [Datafixer Bootstrap/INFO] [mojang/DataFixerBuilder]: 198 Datafixer optimizations took 420 milliseconds
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Evoker$EvokerSummonSpellGoal
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/animal/horse/SkeletonTrapGoal
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/monster/Strider
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/npc/Villager
+[12:38:16] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[12:38:17] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/Structure
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/OceanRuinPieces$OceanRuinPiece
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/SwampHutPiece
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/OceanMonumentPieces$OceanMonumentPiece
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces$WoodlandMansionPiece
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Creating vanilla freeze snapshot
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:fluid Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:item Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:mob_effect Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:potion Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:enchantment Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block_entity_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:particle_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:menu Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:painting_variant Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_serializer Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:attribute Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:stat_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:command_argument_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:villager_profession Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:memory_module_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sensor_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:schedule Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:activity Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/carver Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/feature Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:chunk_status Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/block_state_provider_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/foliage_placer_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/tree_decorator_type Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/biome Sync: VANILLA -> ACTIVE
+[12:38:18] [pool-4-thread-1/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Vanilla freeze snapshot created
+[12:38:19] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/G:/Minecraft%20Modifikationsfabrik/Squake-Ported/build/fg_cache/net/minecraftforge/forge/1.20.3-49.0.2_mapped_official_1.20.3/forge-1.20.3-49.0.2_mapped_official_1.20.3.jar%2316!/assets/.mcassetsroot' uses unexpected schema
+[12:38:19] [Render thread/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/G:/Minecraft%20Modifikationsfabrik/Squake-Ported/build/fg_cache/net/minecraftforge/forge/1.20.3-49.0.2_mapped_official_1.20.3/forge-1.20.3-49.0.2_mapped_official_1.20.3.jar%2316!/data/.mcassetsroot' uses unexpected schema
+[12:38:19] [Render thread/INFO] [mojang/YggdrasilAuthenticationService]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[12:38:19] [Render thread/INFO] [minecraft/Minecraft]: Setting user: Dev
+[12:38:19] [Render thread/INFO] [minecraft/Minecraft]: Backend library: LWJGL version 3.3.2+13
+[12:38:19] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 6753
+[12:38:19] [Render thread/DEBUG] [ne.mi.fm.ModWorkManager/LOADING]: Using 8 threads for parallel mod-loading
+[12:38:19] [Render thread/DEBUG] [ne.mi.fm.ja.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader TransformingClassLoader[TRANSFORMER]@2038484780 - got SecureModuleClassLoader[LAYER PLUGIN]@2025066647
+[12:38:19] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[12:38:20] [Render thread/DEBUG] [ne.mi.fm.ja.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader TransformingClassLoader[TRANSFORMER]@2038484780 - got SecureModuleClassLoader[LAYER PLUGIN]@2025066647
+[12:38:20] [Render thread/DEBUG] [ne.mi.fm.ja.FMLModContainer/LOADING]: Creating FMLModContainer instance for mett.palemannie.squakeported.SquakePorted
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 0.0 from TransformingClassLoader[TRANSFORMER]@2038484780
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge version 49.0.2
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge spec 0.0
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.fo.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file squakeported-common.toml for squakeported tracking
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.20.3 from TransformingClassLoader[TRANSFORMER]@2038484780
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: Found MC version information 1.20.3
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ve.mc.MCPVersion/CORE]: Found MCP version information 20231205.124940
+[12:38:20] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 49.0.2, for MC 1.20.3 with MCP 20231205.124940
+[12:38:20] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v49.0.2 Initialized
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for squakeported
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing mett.palemannie.squakeported.ForgeBusEvents to FORGE
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: Java version: 17
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: sun.misc.Unsafe.storeFence: available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Buffer.address: available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:289) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?] {}
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at net.minecraftforge.network.NetworkInitialization.<clinit>(NetworkInitialization.java:34) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar:?] {re:classloading}
+	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:400) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar:?] {re:classloading}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:66) ~[javafmllanguage-1.20.3-49.0.2.jar!/:49.0.2] {}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$10(ModContainer.java:123) ~[fmlcore-1.20.3-49.0.2.jar!/:1.0] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 (in module io.netty.common) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.common
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?] {}
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?] {}
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:411) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?] {}
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:402) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.ConstantPool.<init>(ConstantPool.java:34) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.AttributeKey$1.<init>(AttributeKey.java:27) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at io.netty.util.AttributeKey.<clinit>(AttributeKey.java:27) ~[netty-common-4.1.97.Final.jar:4.1.97.Final] {}
+	at net.minecraftforge.network.NetworkInitialization.<clinit>(NetworkInitialization.java:34) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar:?] {re:classloading}
+	at net.minecraftforge.common.ForgeMod.<init>(ForgeMod.java:400) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar:?] {re:classloading}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?] {}
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:66) ~[javafmllanguage-1.20.3-49.0.2.jar!/:49.0.2] {}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$10(ModContainer.java:123) ~[fmlcore-1.20.3-49.0.2.jar!/:1.0] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) ~[?:?] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) ~[?:?] {}
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: sun.misc.Unsafe: available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: maxDirectMemory: 8585740288 bytes (maybe)
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\User\AppData\Local\Temp (java.io.tmpdir)
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: Platform: Windows
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[12:38:20] [modloading-worker-0/DEBUG] [io.ne.ut.in.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ne.NetworkInitialization/FORGE_NETWORK]: Registering Network forge:login v0
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ne.NetworkInitialization/FORGE_NETWORK]: Registering Network forge:handshake v0
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ne.NetworkInitialization/FORGE_NETWORK]: Registering Network minecraft:register v0
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.ne.NetworkInitialization/FORGE_NETWORK]: Registering Network minecraft:unregister v0
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ModLoadingContext/]: Attempted to register an empty config for type COMMON on mod forge
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.data.ModelDataManager to FORGE
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[12:38:20] [modloading-worker-0/DEBUG] [ne.mi.fm.ja.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ClientForgeMod to MOD
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.ObjectHolderRegistry/REGISTRIES]: Processing ObjectHolder annotations
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.ObjectHolderRegistry/REGISTRIES]: Found 4042 ObjectHolder annotations
+[12:38:20] [Render thread/DEBUG] [ne.mi.co.ca.CapabilityManager/CAPABILITIES]: Attempting to automatically register: Lnet/minecraftforge/energy/IEnergyStorage;
+[12:38:20] [Render thread/DEBUG] [ne.mi.co.ca.CapabilityManager/CAPABILITIES]: Attempting to automatically register: Lnet/minecraftforge/fluids/capability/IFluidHandler;
+[12:38:20] [Render thread/DEBUG] [ne.mi.co.ca.CapabilityManager/CAPABILITIES]: Attempting to automatically register: Lnet/minecraftforge/fluids/capability/IFluidHandlerItem;
+[12:38:20] [Render thread/DEBUG] [ne.mi.co.ca.CapabilityManager/CAPABILITIES]: Attempting to automatically register: Lnet/minecraftforge/items/IItemHandler;
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Unfreezing vanilla registries
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:sound_event
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:sound_event
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:fluid
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:fluid
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:block
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:block
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:attribute
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:attribute
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:mob_effect
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:mob_effect
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:particle_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:particle_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:item
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:item
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:entity_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:entity_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:sensor_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:sensor_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:memory_module_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:memory_module_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:potion
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:potion
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:game_event
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:game_event
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:enchantment
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:enchantment
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:block_entity_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:block_entity_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:painting_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:painting_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:stat_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:stat_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:custom_stat
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:custom_stat
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:chunk_status
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:chunk_status
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:rule_test
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:rule_test
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:rule_block_entity_modifier
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:rule_block_entity_modifier
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:pos_rule_test
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:pos_rule_test
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:menu
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:menu
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:recipe_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:recipe_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:recipe_serializer
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:recipe_serializer
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:position_source_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:position_source_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:command_argument_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:command_argument_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:villager_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:villager_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:villager_profession
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:villager_profession
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:point_of_interest_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:point_of_interest_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:schedule
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:schedule
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:activity
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:activity
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_condition_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_condition_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_number_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_number_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_score_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_score_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_function_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_function_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_nbt_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_nbt_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:loot_pool_entry_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:loot_pool_entry_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:float_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:float_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:int_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:int_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:height_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:height_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:block_predicate_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:block_predicate_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/carver
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/carver
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/feature
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/feature
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/structure_processor
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/structure_processor
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/structure_placement
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/structure_placement
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/structure_piece
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/structure_piece
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/structure_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/structure_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/placement_modifier_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/placement_modifier_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/block_state_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/block_state_provider_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/foliage_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/foliage_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/trunk_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/trunk_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/root_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/root_placer_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/tree_decorator_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/tree_decorator_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/feature_size_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/feature_size_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/biome_source
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/biome_source
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/chunk_generator
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/chunk_generator
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/material_condition
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/material_condition
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/material_rule
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/material_rule
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/density_function_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/density_function_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:block_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:block_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/structure_pool_element
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/structure_pool_element
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/pool_alias_binding
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/pool_alias_binding
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:cat_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:cat_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:frog_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:frog_variant
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:banner_pattern
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:banner_pattern
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:instrument
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:instrument
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:decorated_pot_patterns
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:decorated_pot_patterns
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:creative_mode_tab
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:creative_mode_tab
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:trigger_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:trigger_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:number_format_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:number_format_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:biome_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:biome_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:condition_codecs
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:condition_codecs
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:display_contexts
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:display_contexts
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:entity_data_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:entity_data_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:fluid_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:fluid_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:global_loot_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:global_loot_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:holder_set_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:holder_set_type
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:ingredient_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:ingredient_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: forge:structure_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: forge:structure_modifier_serializers
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Applying holder lookups: minecraft:worldgen/biome
+[12:38:20] [Render thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Holder lookups applied: minecraft:worldgen/biome
+[12:38:21] [Render thread/DEBUG] [ne.mi.cl.lo.ClientModLoader/CORE]: Generating PackInfo named mod:forge for mod file /
+[12:38:21] [Render thread/DEBUG] [ne.mi.cl.lo.ClientModLoader/CORE]: Generating PackInfo named mod:squakeported for mod file G:\Minecraft Modifikationsfabrik\Squake-Ported\build\sourcesSets\main
+[12:38:21] [Render thread/INFO] [ne.mi.ga.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [squakeported]
+[12:38:22] [Render thread/INFO] [minecraft/ReloadableResourceManager]: Reloading ResourceManager: vanilla, mod_resources
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Loading configs type CLIENT
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Built TOML config for G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\forge-client.toml
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\forge-client.toml
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Watching TOML config file G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\forge-client.toml for changes
+[12:38:22] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\forge-client.toml is not correct. Correcting
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfigSpec/CORE]: The comment on key client.compressLanIPv6Addresses does not match the spec. This may create a backup.
+[12:38:22] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.calculateAllNormals was corrected from null to its default, false. 
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfigSpec/CORE]: The comment on key client.calculateAllNormals does not match the spec. This may create a backup.
+[12:38:22] [modloading-worker-0/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key client.stabilizeDirectionGetNearest was corrected from null to its default, true. 
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfigSpec/CORE]: The comment on key client.stabilizeDirectionGetNearest does not match the spec. This may create a backup.
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.co.ForgeConfig/FORGEMOD]: Loaded forge config file forge-client.toml
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Loading configs type COMMON
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Built TOML config for G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\squakeported-common.toml
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\squakeported-common.toml
+[12:38:22] [modloading-worker-0/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Watching TOML config file G:\Minecraft Modifikationsfabrik\Squake-Ported\run\config\squakeported-common.toml for changes
+[12:38:22] [modloading-worker-0/DEBUG] [Squakeported/]: Loaded squake config file squakeported-common.toml
+[12:38:22] [Worker-Main-1/INFO] [minecraft/UnihexProvider]: Found unifont_all_no_pua-15.1.04.hex, loading
+[12:38:22] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[12:38:23] [Forge Version Check/DEBUG] [ne.mi.fm.VersionChecker/]: [forge] Received version check data:
+{
+  "homepage": "https://files.minecraftforge.net/net/minecraftforge/forge/",
+  "promos": {
+    "1.1-latest": "1.3.4.29",
+    "1.2.3-latest": "1.4.1.64",
+    "1.2.4-latest": "2.0.0.68",
+    "1.2.5-latest": "3.4.9.171",
+    "1.3.2-latest": "4.3.5.318",
+    "1.4.0-latest": "5.0.0.326",
+    "1.4.1-latest": "6.0.0.329",
+    "1.4.2-latest": "6.0.1.355",
+    "1.4.3-latest": "6.2.1.358",
+    "1.4.4-latest": "6.3.0.378",
+    "1.4.5-latest": "6.4.2.448",
+    "1.4.6-latest": "6.5.0.489",
+    "1.4.7-latest": "6.6.2.534",
+    "1.5-latest": "7.7.0.598",
+    "1.5.1-latest": "7.7.2.682",
+    "1.5.2-latest": "7.8.1.738",
+    "1.5.2-recommended": "7.8.1.738",
+    "1.6.1-latest": "8.9.0.775",
+    "1.6.2-latest": "9.10.1.871",
+    "1.6.2-recommended": "9.10.1.871",
+    "1.6.3-latest": "9.11.0.878",
+    "1.6.4-latest": "9.11.1.1345",
+    "1.6.4-recommended": "9.11.1.1345",
+    "1.7.2-latest": "10.12.2.1161",
+    "1.7.2-recommended": "10.12.2.1161",
+    "1.7.10-latest": "10.13.4.1614",
+    "1.7.10-recommended": "10.13.4.1614",
+    "1.8-latest": "11.14.4.1577",
+    "1.8-recommended": "11.14.4.1563",
+    "1.8.8-latest": "11.15.0.1655",
+    "1.8.9-latest": "11.15.1.2318",
+    "1.8.9-recommended": "11.15.1.2318",
+    "1.9-latest": "12.16.1.1938",
+    "1.9-recommended": "12.16.1.1887",
+    "1.9.4-latest": "12.17.0.2317",
+    "1.9.4-recommended": "12.17.0.2317",
+    "1.10-latest": "12.18.0.2000",
+    "1.10.2-latest": "12.18.3.2511",
+    "1.10.2-recommended": "12.18.3.2511",
+    "1.11-latest": "13.19.1.2199",
+    "1.11-recommended": "13.19.1.2189",
+    "1.11.2-latest": "13.20.1.2588",
+    "1.11.2-recommended": "13.20.1.2588",
+    "1.12-latest": "14.21.1.2443",
+    "1.12-recommended": "14.21.1.2387",
+    "1.12.1-latest": "14.22.1.2485",
+    "1.12.1-recommended": "14.22.1.2478",
+    "1.12.2-latest": "14.23.5.2864",
+    "1.12.2-recommended": "14.23.5.2859",
+    "1.13.2-latest": "25.0.223",
+    "1.14.2-latest": "26.0.63",
+    "1.14.3-latest": "27.0.60",
+    "1.14.4-latest": "28.2.30",
+    "1.14.4-recommended": "28.2.26",
+    "1.15-latest": "29.0.4",
+    "1.15.1-latest": "30.0.51",
+    "1.15.2-latest": "31.2.62",
+    "1.15.2-recommended": "31.2.57",
+    "1.16.1-latest": "32.0.108",
+    "1.16.2-latest": "33.0.61",
+    "1.16.3-latest": "34.1.42",
+    "1.16.3-recommended": "34.1.0",
+    "1.16.4-latest": "35.1.37",
+    "1.16.4-recommended": "35.1.4",
+    "1.16.5-latest": "36.2.42",
+    "1.16.5-recommended": "36.2.34",
+    "1.17.1-latest": "37.1.1",
+    "1.17.1-recommended": "37.1.1",
+    "1.18-latest": "38.0.17",
+    "1.18.1-latest": "39.1.2",
+    "1.18.1-recommended": "39.1.0",
+    "1.18.2-recommended": "40.3.0",
+    "1.18.2-latest": "40.3.12",
+    "1.19-latest": "41.1.0",
+    "1.19-recommended": "41.1.0",
+    "1.19.1-latest": "42.0.9",
+    "1.19.2-recommended": "43.5.0",
+    "1.19.2-latest": "43.5.2",
+    "1.19.3-latest": "44.1.23",
+    "1.19.3-recommended": "44.1.0",
+    "1.19.4-recommended": "45.4.0",
+    "1.19.4-latest": "45.4.5",
+    "1.20-latest": "46.0.14",
+    "1.20.1-recommended": "47.4.10",
+    "1.20.1-latest": "47.4.23",
+    "1.20.2-latest": "48.1.0",
+    "1.20.2-recommended": "48.1.0",
+    "1.20.3-latest": "49.0.2",
+    "1.20.4-latest": "49.2.8",
+    "1.20.4-recommended": "49.2.0",
+    "1.20.6-latest": "50.2.10",
+    "1.20.6-recommended": "50.2.0",
+    "1.21-latest": "51.0.33",
+    "1.21.1-latest": "52.1.16",
+    "1.21.1-recommended": "52.1.0",
+    "1.21.3-latest": "53.1.12",
+    "1.21.3-recommended": "53.1.0",
+    "1.21.4-latest": "54.1.18",
+    "1.21.4-recommended": "54.1.14",
+    "1.21.5-latest": "55.1.13",
+    "1.21.5-recommended": "55.1.0",
+    "1.21.6-latest": "56.0.9",
+    "1.21.7-latest": "57.0.3",
+    "1.21.8-latest": "58.1.22",
+    "1.21.8-recommended": "58.1.0",
+    "1.21.9-latest": "59.0.5",
+    "1.21.10-latest": "60.1.15",
+    "1.21.10-recommended": "60.1.0",
+    "1.21.11-latest": "61.2.1",
+    "1.21.11-recommended": "61.2.0",
+    "26.1-latest": "62.0.9",
+    "26.1.1-latest": "63.0.2",
+    "26.1.2-latest": "64.1.3",
+    "26.1.2-recommended": "64.1.0",
+    "26.2-latest": "65.1.3",
+    "26.2-recommended": "65.1.0"
+  }
+}
+[12:38:23] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: BETA Current: 49.0.2 Target: 49.0.2
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Freezing registries
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:fluid Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:item Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:mob_effect Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:potion Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:enchantment Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block_entity_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:particle_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:menu Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:painting_variant Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_serializer Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:attribute Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:stat_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:command_argument_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:villager_profession Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:memory_module_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sensor_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:schedule Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:activity Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/carver Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/feature Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:chunk_status Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/block_state_provider_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/foliage_placer_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/tree_decorator_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/biome Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:entity_data_serializers Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:global_loot_modifier_serializers Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:biome_modifier_serializers Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:structure_modifier_serializers Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:fluid_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:holder_set_type Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:display_contexts Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:condition_codecs Sync: FROZEN -> ACTIVE
+[12:38:26] [modloading-worker-0/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:ingredient_serializers Sync: FROZEN -> ACTIVE
+[12:38:28] [modloading-worker-0/DEBUG] [ne.mi.re.GameData/REGISTRIES]: All registries frozen
+[12:38:28] [Render thread/DEBUG] [ne.mi.co.ForgeI18n/CORE]: Loading I18N data entries: 6758
+[12:38:28] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:item.goat_horn.play
+[12:38:28] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[12:38:28] [Render thread/WARN] [minecraft/SoundEngine]: Missing sound for event: minecraft:entity.generic.wind_burst
+[12:38:28] [Render thread/INFO] [mojang/Library]: OpenAL initialized on device OpenAL Soft on Kopfh�rer (4- Logitech G535 Gaming Headset)
+[12:38:28] [Render thread/INFO] [minecraft/SoundEngine]: Sound engine started
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[12:38:29] [Render thread/WARN] [minecraft/ShaderInstance]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[12:38:29] [Render thread/INFO] [minecraft/TextureAtlas]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[12:38:29] [IO-Worker-1/INFO] [mojang/RealmsClient]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[12:38:29] [IO-Worker-1/ERROR] [mojang/RealmsAvailability]: Couldn't connect to realms
+com.mojang.realmsclient.exception.RealmsServiceException: Realms authentication error with message 'java.lang.RuntimeException: Failed to parse into SignedJWT: 0'
+	at com.mojang.realmsclient.client.RealmsClient.execute(RealmsClient.java:447) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar%2316!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.mojang.realmsclient.client.RealmsClient.clientCompatible(RealmsClient.java:232) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar%2316!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at com.mojang.realmsclient.RealmsAvailability.lambda$check$0(RealmsAvailability.java:45) ~[forge-1.20.3-49.0.2_mapped_official_1.20.3.jar%2316!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[?:?] {}
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?] {}
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?] {}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {}
+[12:38:36] [Render thread/DEBUG] [ne.mi.se.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:forge for mod file /
+[12:38:36] [Render thread/DEBUG] [ne.mi.se.ServerLifecycleHooks/CORE]: Generating PackInfo named mod:squakeported for mod file G:\Minecraft Modifikationsfabrik\Squake-Ported\build\sourcesSets\main
+[12:38:37] [Render thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/server/commands/SummonCommand
+[12:38:38] [Render thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/server/commands/RaidCommand
+[12:38:38] [Worker-Main-6/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/raid/Raid
+[12:38:38] [Render thread/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
+[12:38:39] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 1271 advancements
+[12:38:40] [Render thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: Gathering id map for writing to world save Neue World
+[12:38:40] [Render thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: ID Map collection complete Neue World
+[12:38:40] [Server thread/INFO] [minecraft/IntegratedServer]: Starting integrated minecraft server version 1.20.3
+[12:38:40] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[12:38:40] [Server thread/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Loading configs type SERVER
+[12:38:40] [Server thread/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Built TOML config for .\saves\Neue World\serverconfig\forge-server.toml
+[12:38:40] [Server thread/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Loaded TOML config file .\saves\Neue World\serverconfig\forge-server.toml
+[12:38:40] [Server thread/DEBUG] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Watching TOML config file .\saves\Neue World\serverconfig\forge-server.toml for changes
+[12:38:40] [Server thread/DEBUG] [ne.mi.co.ForgeConfig/FORGEMOD]: Loaded forge config file forge-server.toml
+[12:38:40] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/PhantomSpawner
+[12:38:40] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/PatrolSpawner
+[12:38:40] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/npc/CatSpawner
+[12:38:40] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/entity/ai/village/VillageSiege
+[12:38:44] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[12:38:47] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:47] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:48] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:48] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:49] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:49] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:50] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:50] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[12:38:51] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 10%
+[12:38:51] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 19%
+[12:38:52] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 43%
+[12:38:52] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 83%
+[12:38:53] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[12:38:53] [Render thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 9009 ms
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.AbstractByteBuf/]: -Dio.netty.buffer.checkAccessible: true
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.AbstractByteBuf/]: -Dio.netty.buffer.checkBounds: true
+[12:38:53] [Server thread/DEBUG] [io.ne.ut.ResourceLeakDetectorFactory/]: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6d95d272
+[12:38:53] [Server thread/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[12:38:53] [Server thread/DEBUG] [io.ne.ut.in.InternalThreadLocalMap/]: -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.numHeapArenas: 16
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.numDirectArenas: 16
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.pageSize: 8192
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxOrder: 9
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.chunkSize: 4194304
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.smallCacheSize: 256
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.normalCacheSize: 64
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimInterval: 8192
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.useCacheForAllThreads: false
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.PooledByteBufAllocator/]: -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.allocator.type: pooled
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.threadLocalDirectBufferSize: 0
+[12:38:53] [Server thread/DEBUG] [io.ne.bu.ByteBufUtil/]: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+[12:38:53] [Server thread/DEBUG] [ne.mi.co.tr.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/NaturalSpawner
+[12:38:53] [Server thread/INFO] [minecraft/IntegratedServer]: Changing view distance to 6, from 10
+[12:38:53] [Server thread/INFO] [minecraft/IntegratedServer]: Changing simulation distance to 6, from 0
+[12:38:53] [Render thread/DEBUG] [io.ne.ch.MultithreadEventLoopGroup/]: -Dio.netty.eventLoopThreads: 16
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.co.GlobalEventExecutor/]: -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+[12:38:53] [Render thread/DEBUG] [io.ne.ch.ni.NioEventLoop/]: -Dio.netty.noKeySetOptimization: false
+[12:38:53] [Render thread/DEBUG] [io.ne.ch.ni.NioEventLoop/]: -Dio.netty.selectorAutoRebuildThreshold: 512
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.in.PlatformDependent/]: org.jctools-core.MpscChunkedArrayQueue: available
+[12:38:53] [Render thread/DEBUG] [io.ne.ch.DefaultChannelId/]: -Dio.netty.processId: 15888 (auto-detected)
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: -Djava.net.preferIPv4Stack: false
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: -Djava.net.preferIPv6Addresses: system
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.NetUtilInitializations/]: Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+[12:38:53] [Render thread/DEBUG] [io.ne.ut.NetUtil/]: Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+[12:38:53] [Render thread/DEBUG] [io.ne.ch.DefaultChannelId/]: -Dio.netty.machineId: 04:d9:f5:ff:fe:f6:b2:7d (auto-detected)
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.fi.NetworkFilters/]: Injected net.minecraftforge.network.filters.VanillaConnectionNetworkFilter@5c0f5976 into net.minecraft.network.Connection@2c807bbd
+[12:38:54] [Netty Local Client IO #0/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.maxCapacityPerThread: 4096
+[12:38:54] [Netty Local Client IO #0/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.ratio: 8
+[12:38:54] [Netty Local Client IO #0/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.chunkSize: 32
+[12:38:54] [Netty Local Client IO #0/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.blocking: false
+[12:38:54] [Netty Local Client IO #0/DEBUG] [io.ne.ut.Recycler/]: -Dio.netty.recycler.batchFastThreadLocalOnly: true
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received server connection with modlist [forge, minecraft, squakeported]
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Accepted server connection
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received client connection with modlist [forge, minecraft, squakeported]
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received server connection with channels [forge:handshake, forge:login, forge:tier_sorting, minecraft:register, minecraft:unregister]
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of 'PRESENT 1' from server : ACCEPTED
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:handshake' : Version test of 'PRESENT 0' from server : ACCEPTED
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:login' : Version test of 'PRESENT 0' from server : ACCEPTED
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'PRESENT 0' from server : ACCEPTED
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'PRESENT 0' from server : ACCEPTED
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Accepting channel list from server
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received client connection with channels [forge:handshake, forge:login, forge:tier_sorting, minecraft:register, minecraft:unregister]
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:tier_sorting' : Version test of 'PRESENT 1' from client : ACCEPTED
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:handshake' : Version test of 'PRESENT 0' from client : ACCEPTED
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'forge:login' : Version test of 'PRESENT 0' from client : ACCEPTED
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:unregister' : Version test of 'PRESENT 0' from client : ACCEPTED
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Channel 'minecraft:register' : Version test of 'PRESENT 0' from client : ACCEPTED
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.NetworkRegistry/NETREGISTRY]: Accepting channel list from client
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Expecting 19 registries: minecraft:command_argument_type, minecraft:recipe_serializer, minecraft:sound_event, minecraft:particle_type, minecraft:villager_profession, minecraft:item, minecraft:potion, minecraft:painting_variant, forge:fluid_type, minecraft:block_entity_type, forge:display_contexts, minecraft:block, forge:entity_data_serializers, minecraft:mob_effect, minecraft:stat_type, minecraft:menu, minecraft:enchantment, minecraft:fluid, minecraft:entity_type
+[12:38:54] [Netty Server IO #1/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received acknowledgement 0 from client
+[12:38:54] [Netty Local Client IO #0/DEBUG] [ne.mi.ne.ForgePacketHandler/FORGE_PACKET_HANDLER]: Received config sync from server for forge-server.toml
+[12:38:54] [Render thread/INFO] [ne.mi.co.ForgeHooks/]: Connected to a modded server.
+[12:38:54] [Server thread/INFO] [minecraft/PlayerList]: Dev[local:E:816d9467] logged in with entity id 184 at (-26.540885159691708, 70.0, -112.3778739925491)
+[12:38:54] [Server thread/INFO] [minecraft/MinecraftServer]: Dev joined the game
+[12:38:55] [Server thread/DEBUG] [io.ne.ut.in.ThreadLocalRandom/]: -Dio.netty.initialSeedUniquifier: 0xce6218c80061375c
+[12:38:55] [Render thread/INFO] [minecraft/AdvancementTree]: Loaded 9 advancements
+[12:38:56] [Server thread/INFO] [minecraft/IntegratedServer]: Saving and pausing game...
+[12:38:56] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:overworld
+[12:38:58] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_nether
+[12:38:58] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_end
+[12:38:58] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: Gathering id map for writing to world save Neue World
+[12:38:58] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: ID Map collection complete Neue World
+[12:38:58] [Server thread/WARN] [minecraft/MinecraftServer]: Can't keep up! Is the server overloaded? Running 3165ms or 63 ticks behind
+[12:39:36] [Server thread/INFO] [minecraft/IntegratedServer]: Saving and pausing game...
+[12:39:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:overworld
+[12:39:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_nether
+[12:39:36] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_end
+[12:39:36] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: Gathering id map for writing to world save Neue World
+[12:39:36] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: ID Map collection complete Neue World
+[12:39:39] [Server thread/INFO] [minecraft/ServerGamePacketListenerImpl]: Dev lost connection: Disconnected
+[12:39:39] [Server thread/INFO] [minecraft/MinecraftServer]: Dev left the game
+[12:39:39] [Server thread/INFO] [minecraft/ServerCommonPacketListenerImpl]: Stopping singleplayer server as player logged out
+[12:39:39] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[12:39:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[12:39:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[12:39:40] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:overworld
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_nether
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[Neue World]'/minecraft:the_end
+[12:39:41] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: Gathering id map for writing to world save Neue World
+[12:39:41] [Server thread/DEBUG] [ne.mi.co.ForgeHooks/WP]: ID Map collection complete Neue World
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (Neue World): All chunks are saved
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[12:39:41] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: Reverting to FROZEN data state.
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:fluid Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:item Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:mob_effect Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sound_event Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:potion Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:enchantment Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:entity_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:block_entity_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:particle_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:menu Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:painting_variant Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:recipe_serializer Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:attribute Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:stat_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:command_argument_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:villager_profession Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:point_of_interest_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:memory_module_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:sensor_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:schedule Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:activity Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/carver Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/feature Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:chunk_status Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/block_state_provider_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/foliage_placer_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/tree_decorator_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry minecraft:worldgen/biome Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:entity_data_serializers Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:global_loot_modifier_serializers Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:biome_modifier_serializers Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:structure_modifier_serializers Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:fluid_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:holder_set_type Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:display_contexts Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:condition_codecs Sync: ACTIVE -> FROZEN
+[12:39:41] [Server thread/DEBUG] [ne.mi.re.ForgeRegistry/REGISTRIES]: Registry forge:ingredient_serializers Sync: ACTIVE -> FROZEN
+[12:39:42] [Server thread/DEBUG] [ne.mi.re.ObjectHolderRegistry/REGISTRIES]: Applying holder lookups
+[12:39:42] [Server thread/DEBUG] [ne.mi.re.ObjectHolderRegistry/REGISTRIES]: Holder lookups applied
+[12:39:42] [Server thread/DEBUG] [ne.mi.re.GameData/REGISTRIES]: FROZEN state restored.
+[12:39:42] [Server thread/DEBUG] [ne.mi.fm.co.ConfigTracker/CONFIG]: Unloading configs type SERVER
+[12:39:43] [Render thread/INFO] [minecraft/Minecraft]: Stopping!
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 2m 18s
+11 actionable tasks: 3 executed, 8 up-to-date

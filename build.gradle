@@ -10,7 +10,7 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = "squakeport_1_20_3-1_20_4"
+    archivesName = "squakeported"
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -135,4 +135,12 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+// Forge 49 must discover the mod metadata and @Mod class in the same
+// development output directory, otherwise it finds mods.toml without a mod class.
+sourceSets.each {
+    def outputDir = layout.buildDirectory.dir("sourcesSets/$it.name")
+    it.output.resourcesDir = outputDir
+    it.java.destinationDirectory = outputDir
 }
