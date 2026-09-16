@@ -1,24 +1,21 @@
-package mett.palemannie.squakeport_1_21_6.event;
+package mett.palemannie.squakeported.event;
 
-import mett.palemannie.squakeport_1_21_6.ModConfig;
-import mett.palemannie.squakeport_1_21_6.Squakeport_1_21_6;
-import mett.palemannie.squakeport_1_21_6.util.KeyBinding;
+import mett.palemannie.squakeported.ModConfig;
+import mett.palemannie.squakeported.SquakePorted;
+import mett.palemannie.squakeported.util.KeyBinding;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.contents.PlainTextContents;
 import net.minecraft.network.chat.contents.TranslatableContents;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import java.util.UUID;
-
 public class ClientEvents {
-    @Mod.EventBusSubscriber(modid = Squakeport_1_21_6.MODID, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = SquakePorted.MODID, value = Dist.CLIENT)
     public static class ClientForgeEvents {
 
         @SubscribeEvent
@@ -34,7 +31,7 @@ public class ClientEvents {
             }
         }
 
-        @Mod.EventBusSubscriber(modid = Squakeport_1_21_6.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
+        @Mod.EventBusSubscriber(modid = SquakePorted.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
         public static class ClientModBusEvents {
             @SubscribeEvent
             public static void onKeyRegister(RegisterKeyMappingsEvent event){

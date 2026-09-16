@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_21_6.util;
+package mett.palemannie.squakeported.util;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;

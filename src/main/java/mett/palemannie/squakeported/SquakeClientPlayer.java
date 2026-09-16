@@ -1,4 +1,4 @@
-package mett.palemannie.squakeport_1_21_6;
+package mett.palemannie.squakeported;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;

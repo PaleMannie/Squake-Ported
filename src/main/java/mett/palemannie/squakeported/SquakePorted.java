@@ -1,19 +1,19 @@
-package mett.palemannie.squakeport_1_21_6;
+package mett.palemannie.squakeported;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(Squakeport_1_21_6.MODID)
-public class Squakeport_1_21_6
+@Mod(SquakePorted.MODID)
+public class SquakePorted
 {
-    public static final String MODID = "squakeport_1_21_6";
-    public static final String MODNAME = "Squakeport_1_21_6";
-    public static Squakeport_1_21_6 instance;
+    public static final String MODID = "squakeported";
+    public static final String MODNAME = "SquakePorted";
+    public static SquakePorted instance;
     public static final Logger LOGGER = LogManager.getLogger(MODNAME);
 
-    public Squakeport_1_21_6(FMLJavaModLoadingContext context){
+    public SquakePorted(FMLJavaModLoadingContext context){
 
         var modBusGroup = context.getModBusGroup();
 
